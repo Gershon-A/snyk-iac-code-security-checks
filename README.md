@@ -40,6 +40,14 @@ Example usage:
 ```
 
 If `update_pr_with_scan_results` set to `true`, the action will add a comment to the PR with the scan results.  
+Add permissions to the workflow to allow the action to add comments to the PR:
+
+```yaml
+permissions:
+  issues: write
+  pull-requests: write
+```
+Comment example:
 
 ![Snyk scan result comment](https://imgur.com/YTOHD9l.png)
 
