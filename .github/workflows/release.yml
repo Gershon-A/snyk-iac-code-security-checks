@@ -16,6 +16,8 @@ on:
         type: boolean
         default: true
 concurrency: release
+env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -76,8 +78,6 @@ jobs:
         run: |
           git push origin v${{ steps.version.outputs.major }} --force
           git push origin v${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }} --force
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update release-next-preview workflow
         uses: jacobtomlinson/gha-find-replace@v3
