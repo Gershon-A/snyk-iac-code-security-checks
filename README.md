@@ -41,7 +41,7 @@ Example usage:
 
 If `update_pr_with_scan_results` set to `true`, the action will add a comment to the PR with the scan results.  
 
-![Snyk scan result comment](https://imgur.com/a/ZI8NbbX.png)
+![Snyk scan result comment](https://imgur.com/YTOHD9l.png)
 
 ## To Do
 
