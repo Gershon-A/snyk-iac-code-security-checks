@@ -33,8 +33,8 @@ jobs:
       - name: Set release version in README example
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: 'infra-report-action@v[0-9\.]+'
-          replace: 'infra-report-action@v${{ inputs.releaseVersion }}'
+          find: 'snyk-iac-code-security-checks@v[0-9\.]+'
+          replace: 'snyk-iac-code-security-checks@v${{ inputs.releaseVersion }}'
           include: README.md
           regex: true
 
