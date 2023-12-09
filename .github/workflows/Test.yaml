@@ -1,0 +1,19 @@
+name: Test Workflow
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run action
+      id: snyk-iac-code-security-checks
+      uses: ./ # Uses an action in the root directory
+      with:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        SNYK_ORG_ID: ${{ secrets.SNYK_ORG_ID }}
+        SNYK_PROJECT_NAME: 'test-project'
+        SNYK_PROJECT_ID: 'test-project-id'
+        SEVERITY_THRESHOLD: 'low'
+        FILE: example-*
+    # Add steps to verify the action's outputs or effects here
