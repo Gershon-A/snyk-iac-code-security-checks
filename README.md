@@ -1,13 +1,18 @@
 # snyk-iac-code-security-checks
 
-"Snyk IaC Security Checks" is a reusable workflow for scanning Infrastructure as Code (IaC) files using Snyk. It identifies security vulnerabilities, provides a detailed report, and can update pull requests with scan results.
+"Snyk IaC Security Checks" is a reusable workflow for scanning Infrastructure as Code (IaC) files using Snyk.
+
+- It identifies security vulnerabilities, provides a detailed report, and can update pull requests with scan results.
+- Integrating into your GitHub Actions workflows as part of the CI/CD pipeline is easy.
+- It allows determining how to acct on venerability detection to continue or failure pipeline.
+- It allows to define the level of severity to fail the pipeline.
 
 ## Usage
 
 To use this workflow in your GitHub Actions, add the following step to your workflow file:
 
 ```yaml
-- name: Use reusable workflow
+- name: Snyk Infrastructure as Code scan
   uses: Gershon-A/snyk-iac-code-security-checks@v1.0.0
   with:
     # your inputs here
