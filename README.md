@@ -60,6 +60,7 @@ Comment example:
 
 - [ ] Improve the PR comment with scan results. Currently, the action adds a comment to the PR with the scan results when `update_pr_with_scan_results` is set to `true`. You could enhance this feature by formatting the comment to make it easier to read, or by including additional information in the comment.
 - [ ] Add support for other Snyk features. Snyk offers many features beyond IaC security scanning. You could extend your action to support other Snyk features, like container scanning or open source dependency scanning.
+- [ ] Add issues exclusion.
 
 ## Future Features
 
