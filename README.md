@@ -13,7 +13,7 @@ To use this workflow in your GitHub Actions, add the following step to your work
 
 ```yaml
 - name: Snyk Infrastructure as Code scan
-  uses: Gershon-A/snyk-iac-code-security-checks@v1.0.0
+  uses: Gershon-A/snyk-iac-code-security-checks@v1.0.1
   with:
     # your inputs here
 ```
@@ -33,7 +33,7 @@ Example usage:
 ```yaml
       - name: Snyk Infrastructure as Code scan
         id: snyk-iac-scan
-        uses: Gershon-A/snyk-iac-code-security-checks@v1.0.0
+        uses: Gershon-A/snyk-iac-code-security-checks@v1.0.1
         continue-on-error: true
         with:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
